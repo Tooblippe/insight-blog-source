@@ -1,3 +1,4 @@
 insightstack
 -----------------------
-static blog site for [InsightStack Blog](www.insightstack.co.za)
+ 
+source for [insightstack's](www.insightstack.co.za) [blog](tooblippe.github.io/insightstack-blog/)
