@@ -1,4 +1,4 @@
-Title: Creating Excel like interactive pivot tables in IPython Notebook using Pandas
+Title: Creating Excel like interactive Pivot Tables in IPython Notebook using Pandas
 date: 2014-04-24 18:50
 comments: false
 slug: pandas-pivot
