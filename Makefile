@@ -70,7 +70,7 @@ dropbox_upload: publish
 gitserve: publish
 	git commit -a -m 'Commit'
 	git push
-	cp -ru $(OUTPUTDIR)/* /Users/tobie/Documents/insightstack-blog
+	cp -u $(OUTPUTDIR)/* /Users/tobie/Documents/insightstack-blog
 	git --git-dir=/Users/tobie/Documents/insightstack-blog/.git commit -a -m "commmit"
 	git --git-dir=/Users/tobie/Documents/insightstack-blog/.git push
 
