@@ -5,7 +5,7 @@ slug: pandas-pivot
 ---
 
 <!-- PELICAN_BEGIN_SUMMARY -->
-This post will focus on using the new widget and interact functionality of IPython 2.00 to generate Excel like interactive pivot tables. (Well almost you will get the idea)
+This post will focus on using the new widget and interact functionality of IPython 2 to generate Excel like interactive pivot tables. (Well almost you will get the idea)
 
 One idea is to write a plugin that you can call on a file or dataframe with a magic command and then an interactive Excel Like Pivot Table is produced.
 
