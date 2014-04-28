@@ -5,29 +5,35 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
 
+  {% block header %}{% endblock %}
 
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>insightStack - Articles by Tobie Nortje, based on github.com/jakevdp/PythonicPerambulations</title>
+	<title>{% block title %}{% endblock %}</title>
 	<meta name="google-site-verification" content="AgIAQN_qsniIQWOq659Bnhzx-LZts2FdgP1kLgtQg-k" />
-	<meta name="description" content="">
+	<meta name="description" content="{% block metadesc %}{% endblock %}">
 	<meta name="author" content="Tobie Nortje">
 
   <!-- Feeds
   ================================================== --> 
-  <link rel="alternate" type="application/atom+xml" href="http://tooblippe.github.io/insightstack-blog/feeds/all.atom.xml" title="insightStack Full Atom Feed">
+  {% if FEED_ALL_ATOM %}
+  <link rel="alternate" type="application/atom+xml" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="{{ SITENAME }} Full Atom Feed">
+  {% endif %}
 
 	<!-- Facebook Open Graph
   ================================================== -->
-  <meta property="og:title" content="">
+  <meta property="og:title" content="{{ TITLE }}">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://tooblippe.github.io/insightstack-blog">
-  <meta property="og:image" content="">
-  <meta property="og:description" content="">
+  <meta property="og:url" content="{{ SITEURL }}">
+  <meta property="og:image" content="{{ AVATAR }}">
+  <meta property="og:description" content="{{ DESCRIPTION }}">
 
   <!-- Twitter Cards
   ================================================== -->
+  {% if TWITTER_CARDS %}
+  {% block twittercards %}{% endblock %}
+  {% endif %}
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -35,11 +41,11 @@
 
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="http://tooblippe.github.io/insightstack-blog/theme/css/base.css">
-	<link rel="stylesheet" href="http://tooblippe.github.io/insightstack-blog/theme/css/skeleton.css">
-	<link rel="stylesheet" href="http://tooblippe.github.io/insightstack-blog/theme/css/layout.css">
-	<link rel="stylesheet" href="http://tooblippe.github.io/insightstack-blog/theme/css/simply.css">
-	<link rel="stylesheet" href="http://tooblippe.github.io/insightstack-blog/theme/css/pygment.css">
+	<link rel="stylesheet" href="{{ FEED_DOMAIN }}/theme/css/base.css">
+	<link rel="stylesheet" href="{{ FEED_DOMAIN }}/theme/css/skeleton.css">
+	<link rel="stylesheet" href="{{ FEED_DOMAIN }}/theme/css/layout.css">
+	<link rel="stylesheet" href="{{ FEED_DOMAIN }}/theme/css/simply.css">
+	<link rel="stylesheet" href="{{ FEED_DOMAIN }}/theme/css/pygment.css">
 	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
 	<!--[if lt IE 9]>
@@ -64,8 +70,8 @@
 	================================================== -->
 	<div class="container">
 		<section id="sidebar" class="two columns">
-			<a href="/"><img id="avatar" src=""></img></a>
-			<h3 id="logo"><a href="http://tooblippe.github.io/insightstack-blog">insightStack</a></h3>
+			<a href="/"><img id="avatar" src="{{ AVATAR }}"></img></a>
+			<h3 id="logo"><a href="{{ FEED_DOMAIN }}">{{ SITENAME }}</a></h3>
 	    <hr class="small" /> 
     	<div id="social">
     		<a class="icon" href="https://twitter.com/tooblippe" title="Twitter"><i class="icon-twitter"></i></a>
@@ -73,7 +79,7 @@
         <a class="icon" href="http://linkedin.com/in/tobienortje" title="LinkedIn"><i class="icon-linkedin"></i></a>
         <a class="icon" href="https://plus.google.com/u/0/+TobieNortje/posts/p/pub" title="Google+"><i class="icon-google-plus"></i></a>
         <a class="icon" href="mailto:tobie.nortje@gmail.com?subject=Hi" title="E-Mail"><i class="icon-envelope"></i></a>
-        <a class="icon" href="http://tooblippe.github.io/insightstack-blog/feeds/all.atom.xml" title="Subscribe (Atom)"><i class="icon-rss"></i></a>
+        <a class="icon" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" title="Subscribe (Atom)"><i class="icon-rss"></i></a>
     	</div> <!-- social -->
       <!-- <hr class="small" />
       <div class="nav">
@@ -85,11 +91,7 @@
 		</section> <!-- sidebar -->
 
 		<section id="content" class="thirteen columns offset-by-one">
-
-      <h3 class="article-title"><a href="2014/04/24/pandas-pivot/" title="Creating Excel like interactive pivot tables in IPython Notebook using Pandas">Creating Excel like interactive pivot tables in IPython Notebook using Pandas</a></h3>
-      <h6 class="article-date">Apr 24, 2014</h6>
-      <hr class="large">
-
+			{% block content %}{% endblock %}
 		</section>
 
 		<footer class="thirteen columns offset-by-one">
@@ -100,20 +102,7 @@
 	</div><!-- container -->
 
 <!-- Google Analytics -->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-49950974-1']);
-  _gaq.push(['_setDomainName', '']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
+	{% include "analytics.html" %}
 
   <script type="text/javascript">
     $("a").on('click', function(e) {

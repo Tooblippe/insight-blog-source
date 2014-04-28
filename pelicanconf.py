@@ -6,7 +6,7 @@ AUTHOR = u'Tobie Nortje, based on github.com/jakevdp/PythonicPerambulations'
 
 SITENAME = u'insightStack'
 SITESUBTITLE = u'some notes using the python and orange stack'
-SITEURL = '' # change in publishconf.py
+SITEURL = 'http://tooblippe.github.io/insightstack-blog' # change in publishconf.py
 
 # Times and dates
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
@@ -52,8 +52,8 @@ CODE_DIR = 'downloads/code'
 NOTEBOOK_DIR = 'downloads/notebooks'
 
 # Theme and plugins
-THEME = 'pelican-octopress-theme/'
-#THEME = 'zurb-F5-basic/'
+#THEME = 'pelican-octopress-theme/'
+THEME = './theme/notebook-simpler'
 
 PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',

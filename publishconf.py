@@ -6,7 +6,7 @@ sys.path.append('.')
 from pelicanconf import *
 
 # keep the .com address to properly find disqus comments
-SITEURL = 'http://tooblippe.github.io/insightstack-blog/'
+SITEURL = 'http://tooblippe.github.io/insightstack-blog'
 
 DELETE_OUTPUT_DIRECTORY = True
 
@@ -16,4 +16,4 @@ DELETE_OUTPUT_DIRECTORY = True
 #RELATIVE_URLS = False
 
 GOOGLE_ANALYTICS = 'UA-49950974-1'
-DISQUS_SITENAME = ''
+DISQUS_SITENAME = 'insightstackblog'
