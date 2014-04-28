@@ -67,6 +67,12 @@ rsync_upload: publish
 dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
 
+gitserve: 
+	cp -r $(OUTPUTDIR)/* /Users/tobie/Documents/insightstack-blog
+	cd /Users/tobie/Documents/insightstack-blog
+	git commit -a -m "commit"
+	git push
+
 ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
 
