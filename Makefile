@@ -70,8 +70,8 @@ dropbox_upload: publish
 gitserve: publish
 	git commit -a -m 'commit source'
 	git push
-	git --git-dir=/Users/tobie/Documents/insight-blog-source/.git commit -a -m "commit site"
-	git --git-dir=/Users/tobie/Documents/insight-blog-source/.git push
+	git --git-dir=/Users/tobie/Documents/insight-blog-source/output/.git commit -a -m "commit site"
+	git --git-dir=/Users/tobie/Documents/insight-blog-source/output/.git push
 
 ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
