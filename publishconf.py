@@ -8,7 +8,7 @@ from pelicanconf import *
 # keep the .com address to properly find disqus comments
 SITEURL = 'http://tooblippe.github.io/insightstack-blog'
 
-DELETE_OUTPUT_DIRECTORY = True
+DELETE_OUTPUT_DIRECTORY = False
 
 # Following items are often useful when publishing
 
