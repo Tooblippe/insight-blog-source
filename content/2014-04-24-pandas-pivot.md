@@ -9,6 +9,10 @@ This post will focus on using the new widget and interact functionality of IPyth
 
 One idea is to write a plugin that you can call on a file or dataframe with a magic command, and then an interactive Excel Like Pivot Table is produced.
 
+
+![pivots]({filename}/images/pivots.gif)
+
+
 <!-- PELICAN_END_SUMMARY -->
 
 {% notebook pandas_pivot.ipynb cells[1:] %}

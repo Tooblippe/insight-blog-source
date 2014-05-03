@@ -6,7 +6,9 @@ AUTHOR = u'Tobie Nortje, based on github.com/jakevdp/PythonicPerambulations'
 
 SITENAME = u'insightStack'
 SITESUBTITLE = u'some notes using the python and orange stack'
-SITEURL = 'http://tooblippe.github.io/insightstack-blog' # change in publishconf.py
+#SITEURL = u'http://tooblippe.github.io/insightstack-blog' # change in publishconf.py
+#AVATAR = '/theme/images/avatar.jpg'
+
 
 # Times and dates
 DEFAULT_DATE_FORMAT = '%b %d, %Y'
@@ -92,7 +94,7 @@ TWITTER_SHOW_FOLLOWER_COUNT = 'true'
 
 
 # RSS/Atom feeds
-FEED_DOMAIN = SITEURL
+#FEED_DOMAIN = SITEURL
 FEED_ATOM = 'atom.xml'
 
 
