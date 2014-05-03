@@ -68,11 +68,10 @@ dropbox_upload: publish
 	cp -r $(OUTPUTDIR)/* $(DROPBOX_DIR)
 
 gitserve: publish
-	git commit -a -m 'Commit'
+	git commit -a -m 'commit source'
 	git push
-	rsync --update -raz --progress $(OUTPUTDIR)/* /Users/tobie/Documents/insightstack-blog
-	git --git-dir=/Users/tobie/Documents/insightstack-blog/.git commit -a -m "commmit"
-	git --git-dir=/Users/tobie/Documents/insightstack-blog/.git push
+	git --git-dir=/Users/tobie/Documents/insight-blog-source/.git commit -a -m "commit site"
+	git --git-dir=/Users/tobie/Documents/insight-blog-source/.git push
 
 ftp_upload: publish
 	lftp ftp://$(FTP_USER)@$(FTP_HOST) -e "mirror -R $(OUTPUTDIR) $(FTP_TARGET_DIR) ; quit"
