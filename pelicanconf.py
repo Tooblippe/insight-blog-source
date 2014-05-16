@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 import os
 
-AUTHOR = u'Tobie Nortje, based on github.com/jakevdp/PythonicPerambulations'
+AUTHOR = u'Tobie Nortje'
 
 SITENAME = u'insightStack'
 SITESUBTITLE = u'some notes using the python and orange stack'
@@ -56,14 +56,18 @@ NOTEBOOK_DIR = 'downloads/notebooks'
 # Theme and plugins
 #THEME = 'pelican-octopress-theme/'
 THEME = './theme/notebook-simpler'
+#THEME = './theme/test'
+
 
 PLUGIN_PATH = 'pelican-plugins'
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal']
 
-DISPLAY_PAGES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = True
+DISPLAY_CATEGORIES_ON_MENU = False
 
+# Blogroll
 
 # The theme file should be updated so that the base header contains the line:
 #
