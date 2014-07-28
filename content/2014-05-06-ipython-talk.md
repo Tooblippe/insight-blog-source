@@ -60,4 +60,4 @@ the stack - the growing number of critical Python scientific and visualization m
 
 
 # Finding the source of this talk
-The complete talk will be hosted on Github. Links will be posted here after the talk.
+[Github](https://github.com/Tooblippe/ipython_csir_30may)
